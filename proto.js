@@ -83,23 +83,64 @@
 
 // part 5
 
-function Person (name, age){
-    const person = Object.create(Person.prototype)
+// function Person (name, age){
+//     const person = Object.create(Person.prototype)
 
-    person.name = name;
-    person.age = age
+//     person.name = name;
+//     person.age = age
 
-    return person
-}
+//     return person
+// }
 
-Person.prototype = {
+// Person.prototype = {
+//     play(){
+//         console.log(`Person is playing`);
+//     }
+// }
+
+//   const imran = Person("ayash", 1)
+//   imran.play()
+//   console.log("imran",imran.name);
+
+
+// // part 6
+
+// function Person (name, age){
+//     // const this = Object.create(Person.prototype)
+
+//     this.name = name;
+//     this.age = age
+
+//     // return this
+// }
+
+// Person.prototype = {
+//     play(){
+//         console.log(`Person is playing`);
+//     }
+// }
+
+//   const imran = new Person("ayash", 1)
+//   imran.play()
+//   console.log("imran", imran.name);
+
+// part 7
+class Person {
+    constructor(name, age){
+        this.name = name;
+        this.age = age;
+    }
+
     play(){
         console.log(`Person is playing`);
     }
+    eat(){
+        console.log(`Person is eating`);
+    }
 }
 
-  const imran = Person("ayash", 1)
+  const imran = new Person("ayash", 1)
   imran.play()
-  console.log("imran",imran.name);
+  console.log("imran", imran.name);
 
 
